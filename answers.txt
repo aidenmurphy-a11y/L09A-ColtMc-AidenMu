@@ -1,0 +1,8 @@
+LO9A - Advanced Exceptions
+Question: What are 3 good practices related to exception handling?
+
+1. It is good practice to extend checked exceptions to create your own exception classes instead of throwing a generic exception, which is hard to track and figure out exactly what the problem was in terms of your code.
+
+2. Always close the resource for file I/O, and always wrap your file operations (like PrintWriter and Scanner) in try and catch so that a missing file or unpredictable file inputs or outputs doesn't crash the program, but instead is handled by the program.
+
+3. Always write clear messages and keep the errors trackable. Put a meaningful message in the extended exception so that a reader can diagnose the problem without unnecessary print statements and further exceptions. Additionally, always fail loudly. Do not leave a catch block empty. Clear messaging and loud messaging helps find errors quickly.
